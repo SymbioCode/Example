@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Головна сторінка{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'pizzashop/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pizzashop/css/style.css' %}">
+    <script src="{% static 'pizzashop/js/bootstrap.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</head>
+<body class="bg-ruby">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <br>
+        <br>
+        <br>
+        <div class="card card-body">
+          <div class="card-body">
+            <h3 class="text-center text-uppercase"><b>{% block heading %}{% endblock %}</b></h3>
+            <br>
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
